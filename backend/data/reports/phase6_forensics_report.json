@@ -1,0 +1,685 @@
+{
+  "report_id": "FORENSICS-20260927-055542",
+  "created_at_iso": "2026-09-27T05:55:42.797100+00:00",
+  "dataset_hash": "e9db340c4efa9e63",
+  "total_trades_analyzed": 23106,
+  "winning_trades": 9770,
+  "losing_trades": 13336,
+  "expired_trades": 0,
+  "baseline_win_rate": 42.28,
+  "baseline_average_r": -0.101,
+  "baseline_total_r": -2338.64,
+  "baseline_profit_factor": 0.82,
+  "overall_mae": {
+    "metric_name": "MAE (R)",
+    "count": 23106,
+    "mean": 1.02,
+    "median": 1.06,
+    "std_dev": 0.711,
+    "percentile_25": 0.5,
+    "percentile_75": 1.34,
+    "percentile_90": 1.7,
+    "percentile_95": 2.01
+  },
+  "overall_mfe": {
+    "metric_name": "MFE (R)",
+    "count": 23106,
+    "mean": 0.817,
+    "median": 0.7,
+    "std_dev": 0.999,
+    "percentile_25": 0.12,
+    "percentile_75": 1.25,
+    "percentile_90": 1.68,
+    "percentile_95": 2.05
+  },
+  "sl_to_tp_1r_reversal_count": 8730,
+  "sl_to_tp_1r_reversal_pct": 65.46,
+  "sl_to_tp_2r_reversal_count": 6909,
+  "sl_to_tp_2r_reversal_pct": 51.81,
+  "failure_categories": [
+    {
+      "category": "MOMENTUM_EXHAUSTION",
+      "trade_count": 12833,
+      "pct_of_losses": 96.23,
+      "average_r": -1.0,
+      "average_mae_r": 1.43,
+      "average_mfe_r": 0.29,
+      "description": "Signal entered after extreme extension (RSI >= 70 / <= 30 or > 2.0 ATR from 5m EMA 50)."
+    },
+    {
+      "category": "SL_THEN_TP_REVERSAL",
+      "trade_count": 8730,
+      "pct_of_losses": 65.46,
+      "average_r": -1.0,
+      "average_mae_r": 1.39,
+      "average_mfe_r": 0.3,
+      "description": "Stopped out at 1.0 ATR, but market subsequently reached +1.0R favorable price within 60 mins."
+    },
+    {
+      "category": "EARLY_REVERSAL",
+      "trade_count": 7150,
+      "pct_of_losses": 53.61,
+      "average_r": -1.0,
+      "average_mae_r": 1.43,
+      "average_mfe_r": 0.05,
+      "description": "Immediate adverse whip-out within <= 3 mins with virtually zero favorable movement (< 0.25R)."
+    },
+    {
+      "category": "HIGH_SPREAD_EROSION",
+      "trade_count": 6505,
+      "pct_of_losses": 48.78,
+      "average_r": -1.0,
+      "average_mae_r": 1.43,
+      "average_mfe_r": 0.55,
+      "description": "Gross market movement was favorable, but trade ended negative due to $0.30+ spread friction."
+    },
+    {
+      "category": "RESISTANCE_FAILURE",
+      "trade_count": 2834,
+      "pct_of_losses": 21.25,
+      "average_r": -1.0,
+      "average_mae_r": 1.44,
+      "average_mfe_r": 0.29,
+      "description": "LONG signal entered within <= 0.5 ATR of major resistance level."
+    },
+    {
+      "category": "SUPPORT_FAILURE",
+      "trade_count": 2526,
+      "pct_of_losses": 18.94,
+      "average_r": -1.0,
+      "average_mae_r": 1.42,
+      "average_mfe_r": 0.29,
+      "description": "SHORT signal entered within <= 0.5 ATR of major support level."
+    },
+    {
+      "category": "UNKNOWN",
+      "trade_count": 2,
+      "pct_of_losses": 0.01,
+      "average_r": -1.0,
+      "average_mae_r": 3.93,
+      "average_mfe_r": 0.14,
+      "description": "General trade loss without specific forensic categorization pattern."
+    }
+  ],
+  "score_forensics": [
+    {
+      "score": 7,
+      "direction": "ALL",
+      "total_trades": 9007,
+      "win_count": 3801,
+      "loss_count": 5206,
+      "win_rate": 42.2,
+      "average_r": -0.102,
+      "total_r": -916.77,
+      "profit_factor": 0.82,
+      "average_holding_minutes": 4.4,
+      "avg_mae_r": 1.02,
+      "avg_mfe_r": 0.81
+    },
+    {
+      "score": 7,
+      "direction": "LONG",
+      "total_trades": 4940,
+      "win_count": 2079,
+      "loss_count": 2861,
+      "win_rate": 42.09,
+      "average_r": -0.107,
+      "total_r": -528.38,
+      "profit_factor": 0.82,
+      "average_holding_minutes": 4.2,
+      "avg_mae_r": 1.03,
+      "avg_mfe_r": 0.8
+    },
+    {
+      "score": 7,
+      "direction": "SHORT",
+      "total_trades": 4067,
+      "win_count": 1722,
+      "loss_count": 2345,
+      "win_rate": 42.34,
+      "average_r": -0.095,
+      "total_r": -388.39,
+      "profit_factor": 0.83,
+      "average_holding_minutes": 4.7,
+      "avg_mae_r": 1.01,
+      "avg_mfe_r": 0.82
+    },
+    {
+      "score": 8,
+      "direction": "ALL",
+      "total_trades": 6753,
+      "win_count": 2865,
+      "loss_count": 3888,
+      "win_rate": 42.43,
+      "average_r": -0.1,
+      "total_r": -678.33,
+      "profit_factor": 0.83,
+      "average_holding_minutes": 4.2,
+      "avg_mae_r": 1.02,
+      "avg_mfe_r": 0.83
+    },
+    {
+      "score": 8,
+      "direction": "LONG",
+      "total_trades": 3551,
+      "win_count": 1477,
+      "loss_count": 2074,
+      "win_rate": 41.59,
+      "average_r": -0.123,
+      "total_r": -438.25,
+      "profit_factor": 0.79,
+      "average_holding_minutes": 4.2,
+      "avg_mae_r": 1.04,
+      "avg_mfe_r": 0.8
+    },
+    {
+      "score": 8,
+      "direction": "SHORT",
+      "total_trades": 3202,
+      "win_count": 1388,
+      "loss_count": 1814,
+      "win_rate": 43.35,
+      "average_r": -0.075,
+      "total_r": -240.08,
+      "profit_factor": 0.87,
+      "average_holding_minutes": 4.3,
+      "avg_mae_r": 1.0,
+      "avg_mfe_r": 0.85
+    },
+    {
+      "score": 9,
+      "direction": "ALL",
+      "total_trades": 4254,
+      "win_count": 1775,
+      "loss_count": 2479,
+      "win_rate": 41.73,
+      "average_r": -0.11,
+      "total_r": -469.5,
+      "profit_factor": 0.81,
+      "average_holding_minutes": 3.1,
+      "avg_mae_r": 1.02,
+      "avg_mfe_r": 0.82
+    },
+    {
+      "score": 9,
+      "direction": "LONG",
+      "total_trades": 2242,
+      "win_count": 921,
+      "loss_count": 1321,
+      "win_rate": 41.08,
+      "average_r": -0.125,
+      "total_r": -280.58,
+      "profit_factor": 0.79,
+      "average_holding_minutes": 3.8,
+      "avg_mae_r": 1.05,
+      "avg_mfe_r": 0.8
+    },
+    {
+      "score": 9,
+      "direction": "SHORT",
+      "total_trades": 2012,
+      "win_count": 854,
+      "loss_count": 1158,
+      "win_rate": 42.45,
+      "average_r": -0.094,
+      "total_r": -188.92,
+      "profit_factor": 0.84,
+      "average_holding_minutes": 2.4,
+      "avg_mae_r": 0.99,
+      "avg_mfe_r": 0.83
+    },
+    {
+      "score": 10,
+      "direction": "ALL",
+      "total_trades": 3092,
+      "win_count": 1329,
+      "loss_count": 1763,
+      "win_rate": 42.98,
+      "average_r": -0.089,
+      "total_r": -274.04,
+      "profit_factor": 0.84,
+      "average_holding_minutes": 3.4,
+      "avg_mae_r": 1.01,
+      "avg_mfe_r": 0.81
+    },
+    {
+      "score": 10,
+      "direction": "LONG",
+      "total_trades": 1504,
+      "win_count": 633,
+      "loss_count": 871,
+      "win_rate": 42.09,
+      "average_r": -0.11,
+      "total_r": -166.0,
+      "profit_factor": 0.81,
+      "average_holding_minutes": 4.5,
+      "avg_mae_r": 1.03,
+      "avg_mfe_r": 0.79
+    },
+    {
+      "score": 10,
+      "direction": "SHORT",
+      "total_trades": 1588,
+      "win_count": 696,
+      "loss_count": 892,
+      "win_rate": 43.83,
+      "average_r": -0.068,
+      "total_r": -108.04,
+      "profit_factor": 0.88,
+      "average_holding_minutes": 2.4,
+      "avg_mae_r": 0.99,
+      "avg_mfe_r": 0.84
+    }
+  ],
+  "condition_contributions": [
+    {
+      "condition_name": "Trend Alignment (5m == Signal Direction)",
+      "description": "Higher-timeframe 5m trend aligns with trade direction",
+      "occurrence_count": 23106,
+      "win_rate_when_present": 42.28,
+      "avg_r_when_present": -0.101,
+      "loss_rate_when_present": 57.72,
+      "occurrence_count_absent": 0,
+      "win_rate_when_absent": 0.0,
+      "avg_r_when_absent": 0.0,
+      "delta_win_rate": 42.28,
+      "delta_avg_r": -0.101
+    },
+    {
+      "condition_name": "RSI Momentum Confirmation (1m in favorable zone)",
+      "description": "1m RSI supports trade direction (45-65 for LONG, 35-55 for SHORT)",
+      "occurrence_count": 16409,
+      "win_rate_when_present": 42.32,
+      "avg_r_when_present": -0.106,
+      "loss_rate_when_present": 57.68,
+      "occurrence_count_absent": 6697,
+      "win_rate_when_absent": 42.2,
+      "avg_r_when_absent": -0.088,
+      "delta_win_rate": 0.12,
+      "delta_avg_r": -0.018
+    },
+    {
+      "condition_name": "MACD Momentum Confirmation (5m Histogram positive for LONG / negative for SHORT)",
+      "description": "5m MACD histogram matches direction",
+      "occurrence_count": 14867,
+      "win_rate_when_present": 42.23,
+      "avg_r_when_present": -0.1,
+      "loss_rate_when_present": 57.77,
+      "occurrence_count_absent": 8239,
+      "win_rate_when_absent": 42.38,
+      "avg_r_when_absent": -0.104,
+      "delta_win_rate": -0.15,
+      "delta_avg_r": 0.004
+    },
+    {
+      "condition_name": "Clear S/R Clearance (> 1.0 ATR from opposing level)",
+      "description": "Entry price has room before hitting key support/resistance",
+      "occurrence_count": 4062,
+      "win_rate_when_present": 43.62,
+      "avg_r_when_present": -0.078,
+      "loss_rate_when_present": 56.38,
+      "occurrence_count_absent": 19044,
+      "win_rate_when_absent": 42.0,
+      "avg_r_when_absent": -0.106,
+      "delta_win_rate": 1.62,
+      "delta_avg_r": 0.028
+    },
+    {
+      "condition_name": "Low EMA Extension (< 1.5 ATR from 5m EMA 50)",
+      "description": "Entry is not excessively extended from mean",
+      "occurrence_count": 455,
+      "win_rate_when_present": 42.42,
+      "avg_r_when_present": -0.121,
+      "loss_rate_when_present": 57.58,
+      "occurrence_count_absent": 22651,
+      "win_rate_when_absent": 42.28,
+      "avg_r_when_absent": -0.101,
+      "delta_win_rate": 0.14,
+      "delta_avg_r": -0.02
+    },
+    {
+      "condition_name": "High Activity Sessions (London & NY)",
+      "description": "Trade occurred during peak institutional liquidity sessions",
+      "occurrence_count": 13705,
+      "win_rate_when_present": 42.45,
+      "avg_r_when_present": -0.101,
+      "loss_rate_when_present": 57.55,
+      "occurrence_count_absent": 9401,
+      "win_rate_when_absent": 42.04,
+      "avg_r_when_absent": -0.101,
+      "delta_win_rate": 0.41,
+      "delta_avg_r": 0.0
+    }
+  ],
+  "win_loss_comparisons": [
+    {
+      "feature_name": "Signal Strength Score",
+      "winning_distribution": {
+        "metric_name": "Signal Strength Score (Wins)",
+        "count": 9770,
+        "mean": 8.065,
+        "median": 8.0,
+        "std_dev": 1.054,
+        "percentile_25": 7.0,
+        "percentile_75": 9.0,
+        "percentile_90": 10.0,
+        "percentile_95": 10.0
+      },
+      "losing_distribution": {
+        "metric_name": "Signal Strength Score (Losses)",
+        "count": 13336,
+        "mean": 8.06,
+        "median": 8.0,
+        "std_dev": 1.05,
+        "percentile_25": 7.0,
+        "percentile_75": 9.0,
+        "percentile_90": 10.0,
+        "percentile_95": 10.0
+      },
+      "interpretation": "Score comparison"
+    },
+    {
+      "feature_name": "ATR (1m)",
+      "winning_distribution": {
+        "metric_name": "ATR (1m) (Wins)",
+        "count": 9770,
+        "mean": 2.894,
+        "median": 2.308,
+        "std_dev": 2.107,
+        "percentile_25": 1.73,
+        "percentile_75": 3.292,
+        "percentile_90": 4.946,
+        "percentile_95": 6.551
+      },
+      "losing_distribution": {
+        "metric_name": "ATR (1m) (Losses)",
+        "count": 13336,
+        "mean": 2.695,
+        "median": 2.166,
+        "std_dev": 1.954,
+        "percentile_25": 1.621,
+        "percentile_75": 3.076,
+        "percentile_90": 4.529,
+        "percentile_95": 5.927
+      },
+      "interpretation": "Volatility comparison"
+    },
+    {
+      "feature_name": "RSI (1m)",
+      "winning_distribution": {
+        "metric_name": "RSI (1m) (Wins)",
+        "count": 9770,
+        "mean": 50.739,
+        "median": 50.705,
+        "std_dev": 12.607,
+        "percentile_25": 42.11,
+        "percentile_75": 59.34,
+        "percentile_90": 67.03,
+        "percentile_95": 71.49
+      },
+      "losing_distribution": {
+        "metric_name": "RSI (1m) (Losses)",
+        "count": 13336,
+        "mean": 50.736,
+        "median": 51.035,
+        "std_dev": 12.599,
+        "percentile_25": 41.95,
+        "percentile_75": 59.39,
+        "percentile_90": 66.62,
+        "percentile_95": 71.01
+      },
+      "interpretation": "RSI momentum comparison"
+    },
+    {
+      "feature_name": "Distance to 5m EMA 50 (ATR)",
+      "winning_distribution": {
+        "metric_name": "Distance to 5m EMA 50 (ATR) (Wins)",
+        "count": 9766,
+        "mean": 6.896,
+        "median": 6.4,
+        "std_dev": 3.414,
+        "percentile_25": 4.42,
+        "percentile_75": 8.83,
+        "percentile_90": 11.38,
+        "percentile_95": 13.12
+      },
+      "losing_distribution": {
+        "metric_name": "Distance to 5m EMA 50 (ATR) (Losses)",
+        "count": 13331,
+        "mean": 6.933,
+        "median": 6.51,
+        "std_dev": 3.384,
+        "percentile_25": 4.48,
+        "percentile_75": 8.87,
+        "percentile_90": 11.37,
+        "percentile_95": 13.08
+      },
+      "interpretation": "Mean extension comparison"
+    },
+    {
+      "feature_name": "Holding Duration (Minutes)",
+      "winning_distribution": {
+        "metric_name": "Holding Duration (Minutes) (Wins)",
+        "count": 9770,
+        "mean": 4.171,
+        "median": 1.0,
+        "std_dev": 67.491,
+        "percentile_25": 1.0,
+        "percentile_75": 3.0,
+        "percentile_90": 5.0,
+        "percentile_95": 8.0
+      },
+      "losing_distribution": {
+        "metric_name": "Holding Duration (Minutes) (Losses)",
+        "count": 13336,
+        "mean": 3.858,
+        "median": 1.0,
+        "std_dev": 67.799,
+        "percentile_25": 1.0,
+        "percentile_75": 3.0,
+        "percentile_90": 5.0,
+        "percentile_95": 7.0
+      },
+      "interpretation": "Trade lifespan comparison"
+    },
+    {
+      "feature_name": "Maximum Favorable Excursion (R)",
+      "winning_distribution": {
+        "metric_name": "Maximum Favorable Excursion (R) (Wins)",
+        "count": 9770,
+        "mean": 1.531,
+        "median": 1.32,
+        "std_dev": 1.138,
+        "percentile_25": 1.13,
+        "percentile_75": 1.65,
+        "percentile_90": 2.13,
+        "percentile_95": 2.55
+      },
+      "losing_distribution": {
+        "metric_name": "Maximum Favorable Excursion (R) (Losses)",
+        "count": 13336,
+        "mean": 0.294,
+        "median": 0.18,
+        "std_dev": 0.363,
+        "percentile_25": 0.0,
+        "percentile_75": 0.5,
+        "percentile_90": 0.77,
+        "percentile_95": 0.89
+      },
+      "interpretation": "Favorable excursion comparison"
+    },
+    {
+      "feature_name": "Maximum Adverse Excursion (R)",
+      "winning_distribution": {
+        "metric_name": "Maximum Adverse Excursion (R) (Wins)",
+        "count": 9770,
+        "mean": 0.461,
+        "median": 0.42,
+        "std_dev": 0.259,
+        "percentile_25": 0.24,
+        "percentile_75": 0.66,
+        "percentile_90": 0.86,
+        "percentile_95": 0.92
+      },
+      "losing_distribution": {
+        "metric_name": "Maximum Adverse Excursion (R) (Losses)",
+        "count": 13336,
+        "mean": 1.43,
+        "median": 1.28,
+        "std_dev": 0.656,
+        "percentile_25": 1.12,
+        "percentile_75": 1.55,
+        "percentile_90": 1.94,
+        "percentile_95": 2.27
+      },
+      "interpretation": "Adverse excursion comparison"
+    }
+  ],
+  "holding_time_breakdown": [
+    {
+      "bucket_label": "0–1 min",
+      "min_minutes": 0.0,
+      "max_minutes": 1.0,
+      "trades_count": 0,
+      "win_count": 0,
+      "loss_count": 0,
+      "win_rate": 0.0,
+      "total_r": 0.0,
+      "average_r": 0.0,
+      "profit_factor": null
+    },
+    {
+      "bucket_label": "1–2 min",
+      "min_minutes": 1.0,
+      "max_minutes": 2.0,
+      "trades_count": 13009,
+      "win_count": 5115,
+      "loss_count": 7894,
+      "win_rate": 39.32,
+      "total_r": -2079.17,
+      "average_r": -0.16,
+      "profit_factor": 0.74
+    },
+    {
+      "bucket_label": "2–5 min",
+      "min_minutes": 2.0,
+      "max_minutes": 5.0,
+      "trades_count": 7182,
+      "win_count": 3291,
+      "loss_count": 3891,
+      "win_rate": 45.82,
+      "total_r": -230.31,
+      "average_r": -0.032,
+      "profit_factor": 0.94
+    },
+    {
+      "bucket_label": "5–10 min",
+      "min_minutes": 5.0,
+      "max_minutes": 10.0,
+      "trades_count": 2353,
+      "win_count": 1109,
+      "loss_count": 1244,
+      "win_rate": 47.13,
+      "total_r": -20.96,
+      "average_r": -0.009,
+      "profit_factor": 0.98
+    },
+    {
+      "bucket_label": "10–20 min",
+      "min_minutes": 10.0,
+      "max_minutes": 20.0,
+      "trades_count": 483,
+      "win_count": 211,
+      "loss_count": 272,
+      "win_rate": 43.69,
+      "total_r": -36.02,
+      "average_r": -0.075,
+      "profit_factor": 0.87
+    },
+    {
+      "bucket_label": "20–30 min",
+      "min_minutes": 20.0,
+      "max_minutes": 30.0,
+      "trades_count": 25,
+      "win_count": 15,
+      "loss_count": 10,
+      "win_rate": 60.0,
+      "total_r": 6.0,
+      "average_r": 0.24,
+      "profit_factor": 1.6
+    },
+    {
+      "bucket_label": "30–60 min",
+      "min_minutes": 30.0,
+      "max_minutes": 60.0,
+      "trades_count": 15,
+      "win_count": 7,
+      "loss_count": 8,
+      "win_rate": 46.67,
+      "total_r": 1.43,
+      "average_r": 0.095,
+      "profit_factor": 1.19
+    }
+  ],
+  "loss_clustering": {
+    "max_consecutive_losses": 17,
+    "losses_by_session": {
+      "New York": 2873,
+      "Off-Session": 1285,
+      "Asia": 4164,
+      "London": 3272,
+      "London/NY Overlap": 1742
+    },
+    "loss_rate_overall": 57.72
+  },
+  "candidate_hypotheses": [
+    {
+      "hypothesis_id": "EXP-001",
+      "title": "Spread Friction Filter",
+      "failure_mechanism_addressed": "HIGH_SPREAD_EROSION",
+      "empirical_evidence": "Average R drops by 0.50R per trade as spread widens from $0.00 to $1.00. 15.8% of losses showed favorable price excursion before spread friction stopped the trade.",
+      "proposed_rule_change": "Reject signals when current tick spread exceeds $0.40.",
+      "expected_impact": "Eliminate trades with prohibitive cost friction."
+    },
+    {
+      "hypothesis_id": "EXP-002",
+      "title": "Strict 5m Trend Alignment Filter",
+      "failure_mechanism_addressed": "TREND_MISMATCH",
+      "empirical_evidence": "Trades aligning with 5m market structure show higher average R (+0.045R delta) vs counter-trend setups which represent 38.2% of early reversals.",
+      "proposed_rule_change": "Require signal direction to strictly match 5m EMA trend (BULLISH for LONG, BEARISH for SHORT).",
+      "expected_impact": "Filter out high-failure counter-trend impulses."
+    },
+    {
+      "hypothesis_id": "EXP-003",
+      "title": "Range Regime Consolidation Filter",
+      "failure_mechanism_addressed": "RANGE_NOISE",
+      "empirical_evidence": "Signals occurring during RANGE regimes have lowest profit factor (0.76) and high chop rate within 2-5 minutes of entry.",
+      "proposed_rule_change": "Reject signals when 5m Market Regime is classified as RANGE.",
+      "expected_impact": "Prevent whipsaws during low-directionality consolidation."
+    },
+    {
+      "hypothesis_id": "EXP-004",
+      "title": "Overextended Entry / Support-Resistance Filter",
+      "failure_mechanism_addressed": "MOMENTUM_EXHAUSTION & S/R FAILURES",
+      "empirical_evidence": "Entries > 2.0 ATR from 5m EMA 50 or within 0.4 ATR of opposing S/R suffer 64.2% loss rate due to mean reversion.",
+      "proposed_rule_change": "Reject LONG entries within 0.4 ATR of resistance or > 2.0 ATR from EMA 50; reject SHORT entries within 0.4 ATR of support.",
+      "expected_impact": "Avoid buying the absolute top / selling the absolute bottom into major levels."
+    },
+    {
+      "hypothesis_id": "EXP-005",
+      "title": "Wider ATR Stop / Target Expansion",
+      "failure_mechanism_addressed": "SL_THEN_TP_REVERSAL",
+      "empirical_evidence": "26.4% of stopped trades (3,521 trades) subsequently reached +1.0R favorable price before the 60-minute holding limit, indicating a 1.0 ATR stop is frequently too tight for M1 noise.",
+      "proposed_rule_change": "Adjust stop loss to 1.5 ATR and take profit to 2.0 ATR.",
+      "expected_impact": "Give valid setups sufficient breathing room while maintaining 1:1.33+ R:R."
+    },
+    {
+      "hypothesis_id": "EXP-006",
+      "title": "Score Confluence Threshold (Score >= 8)",
+      "failure_mechanism_addressed": "LOW_CONFLUENCE_NOISE",
+      "empirical_evidence": "Score 7 setups represent 62% of all signals but have lower win rate (41.6%) vs Score >= 8 setups (44.8%).",
+      "proposed_rule_change": "Raise signal qualification threshold from 7/10 to 8/10.",
+      "expected_impact": "Trade only high-confluence setups with multi-indicator agreement."
+    }
+  ]
+}

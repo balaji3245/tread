@@ -1,0 +1,40 @@
+# Python
+backend/.venv/
+.venv/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+**/.pytest_cache/
+
+# Node / Next.js
+frontend/node_modules/
+node_modules/
+frontend/.next/
+.next/
+frontend/out/
+frontend/build/
+frontend/dist/
+frontend/.turbo/
+.npm
+
+# Environment variables & secrets (NEVER commit credentials)
+backend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+.env
+.env.local
+
+# OS / Editor
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Test temp data artifacts
+backend/data/TEST*
+*.parquet
+*.feather

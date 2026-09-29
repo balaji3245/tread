@@ -1,0 +1,171 @@
+{
+  "dataset_hash": "e9db340c4efa9e63",
+  "total_trades": 23106,
+  "mfe_reach_by_score": [
+    {
+      "score": 7,
+      "trade_count": 9007,
+      "p_reach_0_5r_pct": 89.02,
+      "p_reach_1_0r_pct": 80.8,
+      "p_reach_1_5r_pct": 73.33,
+      "p_reach_2_0r_pct": 66.27
+    },
+    {
+      "score": 8,
+      "trade_count": 6753,
+      "p_reach_0_5r_pct": 88.42,
+      "p_reach_1_0r_pct": 79.79,
+      "p_reach_1_5r_pct": 72.18,
+      "p_reach_2_0r_pct": 64.68
+    },
+    {
+      "score": 9,
+      "trade_count": 4254,
+      "p_reach_0_5r_pct": 87.87,
+      "p_reach_1_0r_pct": 79.24,
+      "p_reach_1_5r_pct": 71.27,
+      "p_reach_2_0r_pct": 63.33
+    },
+    {
+      "score": 10,
+      "trade_count": 3092,
+      "p_reach_0_5r_pct": 87.23,
+      "p_reach_1_0r_pct": 79.3,
+      "p_reach_1_5r_pct": 71.05,
+      "p_reach_2_0r_pct": 63.81
+    }
+  ],
+  "mae_recovery_table": [
+    {
+      "adverse_threshold_r": 0.5,
+      "trades_reaching_count": 21693,
+      "pct_of_all_trades": 93.88,
+      "later_reached_1r_count": 17085,
+      "later_reached_1r_pct": 78.76,
+      "later_reached_2r_count": 13615,
+      "later_reached_2r_pct": 62.76
+    },
+    {
+      "adverse_threshold_r": 0.75,
+      "trades_reaching_count": 20783,
+      "pct_of_all_trades": 89.95,
+      "later_reached_1r_count": 16191,
+      "later_reached_1r_pct": 77.91,
+      "later_reached_2r_count": 12735,
+      "later_reached_2r_pct": 61.28
+    },
+    {
+      "adverse_threshold_r": 1.0,
+      "trades_reaching_count": 19900,
+      "pct_of_all_trades": 86.12,
+      "later_reached_1r_count": 15323,
+      "later_reached_1r_pct": 77.0,
+      "later_reached_2r_count": 11889,
+      "later_reached_2r_pct": 59.74
+    },
+    {
+      "adverse_threshold_r": 1.25,
+      "trades_reaching_count": 19042,
+      "pct_of_all_trades": 82.41,
+      "later_reached_1r_count": 14479,
+      "later_reached_1r_pct": 76.04,
+      "later_reached_2r_count": 11062,
+      "later_reached_2r_pct": 58.09
+    },
+    {
+      "adverse_threshold_r": 1.5,
+      "trades_reaching_count": 18094,
+      "pct_of_all_trades": 78.31,
+      "later_reached_1r_count": 13547,
+      "later_reached_1r_pct": 74.87,
+      "later_reached_2r_count": 10163,
+      "later_reached_2r_pct": 56.17
+    },
+    {
+      "adverse_threshold_r": 2.0,
+      "trades_reaching_count": 16326,
+      "pct_of_all_trades": 70.66,
+      "later_reached_1r_count": 11822,
+      "later_reached_1r_pct": 72.41,
+      "later_reached_2r_count": 8544,
+      "later_reached_2r_pct": 52.33
+    }
+  ],
+  "time_to_adverse_buckets": [
+    {
+      "bucket": "0\u20131 min",
+      "trade_count": 0,
+      "loss_pct": 0.0,
+      "avg_mae_r": 0.0,
+      "avg_mfe_r": 0.0
+    },
+    {
+      "bucket": "1\u20132 min",
+      "trade_count": 11917,
+      "loss_pct": 38.27,
+      "avg_mae_r": 0.8,
+      "avg_mfe_r": 1.0
+    },
+    {
+      "bucket": "2\u20133 min",
+      "trade_count": 4575,
+      "loss_pct": 72.98,
+      "avg_mae_r": 1.22,
+      "avg_mfe_r": 0.57
+    },
+    {
+      "bucket": "3\u20135 min",
+      "trade_count": 3988,
+      "loss_pct": 79.46,
+      "avg_mae_r": 1.29,
+      "avg_mfe_r": 0.62
+    },
+    {
+      "bucket": "5\u201310 min",
+      "trade_count": 2192,
+      "loss_pct": 85.36,
+      "avg_mae_r": 1.29,
+      "avg_mfe_r": 0.71
+    },
+    {
+      "bucket": "10\u201320 min",
+      "trade_count": 408,
+      "loss_pct": 91.18,
+      "avg_mae_r": 1.31,
+      "avg_mfe_r": 0.81
+    },
+    {
+      "bucket": "20\u201360 min",
+      "trade_count": 26,
+      "loss_pct": 92.31,
+      "avg_mae_r": 1.27,
+      "avg_mfe_r": 0.82
+    }
+  ],
+  "early_noise_count": 16575,
+  "early_stopped_count": 11053,
+  "early_stopped_later_1r_pct": 66.56,
+  "early_stopped_later_2r_pct": 52.79,
+  "mfe_at_horizons_mean": {
+    "1": 0.42,
+    "2": 0.66,
+    "3": 0.84,
+    "5": 1.14,
+    "10": 1.69,
+    "20": 2.49
+  },
+  "mae_at_horizons_mean": {
+    "1": 0.67,
+    "2": 0.9,
+    "3": 1.07,
+    "5": 1.36,
+    "10": 1.87,
+    "20": 2.61
+  },
+  "time_to_mfe_mean": 2.1,
+  "time_to_mae_mean": 2.3,
+  "time_to_sl_mean": 3.9,
+  "time_to_tp_mean": 4.1,
+  "max_mfe_before_stop_mean": 0.29,
+  "max_mae_before_recovery_mean": 0.46
+}

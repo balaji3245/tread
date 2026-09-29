@@ -1,0 +1,15 @@
+{
+  "symbol": "XAUUSD",
+  "timeframe": "5m",
+  "start": "2025-10-01T15:15:00+00:00",
+  "end": "2026-09-25T22:55:00+00:00",
+  "start_ts": 1759331700,
+  "end_ts": 1790376900,
+  "available_days": 359,
+  "candle_count": 68221,
+  "source": "Exness MT5",
+  "created_at": "2026-09-28T16:29:11.774866+00:00",
+  "timezone": "UTC",
+  "file_size_bytes": 1365419,
+  "dataset_hash": ""
+}

@@ -1,0 +1,158 @@
+{
+  "candidate_id": "V6E-H006",
+  "title": "Composite High-Conviction Entry State",
+  "rule_description": "Require Impulse State in (EARLY_IMPULSE, CONTROLLED_PULLBACK), S/R Clearance >= 0.8 ATR, and Volatility >= Q3",
+  "dev_trade_count": 306,
+  "dev_net_r": -42.99,
+  "dev_win_rate": 42.16,
+  "dev_profit_factor": 0.76,
+  "dev_expectancy": -0.14,
+  "dev_trade_reduction_pct": 94.9,
+  "preliminary_oos_trade_count": 764,
+  "preliminary_oos_net_r": 5.98,
+  "preliminary_oos_delta_r": 1282.13,
+  "preliminary_oos_win_rate": 47.51,
+  "preliminary_oos_profit_factor": 1.01,
+  "preliminary_oos_expectancy": 0.008,
+  "preliminary_oos_trade_reduction_pct": 95.0,
+  "positive_windows": 3,
+  "negative_windows": 5,
+  "windows": [
+    {
+      "window_index": 1,
+      "trades": 110,
+      "base_trades": 2019,
+      "trade_reduction_pct": 94.6,
+      "net_r": 8.99,
+      "win_rate": 50.91,
+      "profit_factor": 1.17,
+      "expectancy": 0.082,
+      "early_stop_rate_pct": 40.0
+    },
+    {
+      "window_index": 2,
+      "trades": 75,
+      "base_trades": 1773,
+      "trade_reduction_pct": 95.8,
+      "net_r": 0.0,
+      "win_rate": 49.33,
+      "profit_factor": 1.0,
+      "expectancy": 0.0,
+      "early_stop_rate_pct": 37.33
+    },
+    {
+      "window_index": 3,
+      "trades": 113,
+      "base_trades": 1946,
+      "trade_reduction_pct": 94.2,
+      "net_r": 14.0,
+      "win_rate": 53.1,
+      "profit_factor": 1.26,
+      "expectancy": 0.124,
+      "early_stop_rate_pct": 30.97
+    },
+    {
+      "window_index": 4,
+      "trades": 91,
+      "base_trades": 1881,
+      "trade_reduction_pct": 95.2,
+      "net_r": -20.01,
+      "win_rate": 37.36,
+      "profit_factor": 0.65,
+      "expectancy": -0.22,
+      "early_stop_rate_pct": 52.75
+    },
+    {
+      "window_index": 5,
+      "trades": 87,
+      "base_trades": 1846,
+      "trade_reduction_pct": 95.3,
+      "net_r": -1.0,
+      "win_rate": 45.98,
+      "profit_factor": 0.98,
+      "expectancy": -0.011,
+      "early_stop_rate_pct": 37.93
+    },
+    {
+      "window_index": 6,
+      "trades": 100,
+      "base_trades": 1883,
+      "trade_reduction_pct": 94.7,
+      "net_r": -14.0,
+      "win_rate": 39.0,
+      "profit_factor": 0.77,
+      "expectancy": -0.14,
+      "early_stop_rate_pct": 46.0
+    },
+    {
+      "window_index": 7,
+      "trades": 79,
+      "base_trades": 1915,
+      "trade_reduction_pct": 95.9,
+      "net_r": -1.0,
+      "win_rate": 46.84,
+      "profit_factor": 0.98,
+      "expectancy": -0.013,
+      "early_stop_rate_pct": 39.24
+    },
+    {
+      "window_index": 8,
+      "trades": 109,
+      "base_trades": 1973,
+      "trade_reduction_pct": 94.5,
+      "net_r": 19.0,
+      "win_rate": 55.05,
+      "profit_factor": 1.39,
+      "expectancy": 0.174,
+      "early_stop_rate_pct": 33.03
+    }
+  ],
+  "status": "REJECTED",
+  "decision": "REJECTED",
+  "decision_rationale": "Severe trade reduction (95.0%).",
+  "final_oos_locked": true,
+  "final_oos_evaluated": false,
+  "final_oos_date_range": "2026-08-27 to 2026-09-25",
+  "provenance": [
+    {
+      "feature_name": "session_block_utc",
+      "source_timeframe": "1m",
+      "calculation_timestamp": 0,
+      "required_historical_bars": 1,
+      "future_data_dependency": false,
+      "formula_description": "UTC hour of signal candle timestamp partitioned into 5 standard global session windows."
+    },
+    {
+      "feature_name": "volatility_quantile_q1_q5",
+      "source_timeframe": "1m",
+      "calculation_timestamp": 0,
+      "required_historical_bars": 120,
+      "future_data_dependency": false,
+      "formula_description": "Percentile rank of 1m ATR(14) against rolling 120-bar historical ATR distribution."
+    },
+    {
+      "feature_name": "impulse_state_classification",
+      "source_timeframe": "1m",
+      "calculation_timestamp": 0,
+      "required_historical_bars": 25,
+      "future_data_dependency": false,
+      "formula_description": "Displacement from 1m EMA21, cumulative 3-bar range in ATR units, and consecutive directional closes at bar T close."
+    },
+    {
+      "feature_name": "trend_range_regime_classification",
+      "source_timeframe": "5m+1m",
+      "calculation_timestamp": 0,
+      "required_historical_bars": 60,
+      "future_data_dependency": false,
+      "formula_description": "5m primary trend alignment + 1m structure + 5m EMA50 distance ratio at bar T close."
+    },
+    {
+      "feature_name": "opposing_sr_clearance_atr",
+      "source_timeframe": "1m",
+      "calculation_timestamp": 0,
+      "required_historical_bars": 30,
+      "future_data_dependency": false,
+      "formula_description": "Distance in ATR units from bar T close to closest detected opposing support/resistance level."
+    }
+  ]
+}
