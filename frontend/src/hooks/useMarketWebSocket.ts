@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, useCallback } from "react";
-import { WS_URL } from "@/lib/config";
+import { getWsUrl, WS_URL } from "@/lib/config";
 import { ConnectionState, MarketTick, Candle, Timeframe, WsStatusData, WsMessage, MarketSignal } from "@/types/market";
 
 interface UseMarketWebSocketOptions {
@@ -37,7 +37,8 @@ export function useMarketWebSocket(options: UseMarketWebSocketOptions = {}) {
 
     try {
       setConnectionState((prev) => (prev === "DISCONNECTED" ? "RECONNECTING" : "CONNECTING"));
-      const ws = new WebSocket(WS_URL);
+      const targetWsUrl = getWsUrl();
+      const ws = new WebSocket(targetWsUrl);
       wsRef.current = ws;
 
       ws.onopen = () => {
